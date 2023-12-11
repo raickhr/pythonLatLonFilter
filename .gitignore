@@ -1,4 +1,6 @@
 **/*.nc
+**/*.pdf
+**/*.jpg
 out.*
 err.*
 __pycache__/
