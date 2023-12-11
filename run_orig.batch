@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name orig
+#SBATCH --qos=regular
+#SBATCH --ntasks=2400
+#SBATCH --constraint=cpu
+#SBATCH --account=m2597
+#SBATCH --time=1-00:00:00
+#SBATCH --output out.%j
+#SBATCH --error err.%j
+#SBATCH --mail-type=all
+#SBATCH --mail-user=shikhar.rai@rochester.edu
+
+module load python
+srun -n 2400 python main_orig.py
+

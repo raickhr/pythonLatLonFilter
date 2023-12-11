@@ -1,0 +1,4 @@
+**/*.nc
+out.*
+err.*
+__pycache__/
