@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name Recipe3
+#SBATCH --qos=regular
+#SBATCH --ntasks=1200
+#SBATCH --constraint=cpu
+#SBATCH --account=m2597
+#SBATCH --time=24:00:00
+#SBATCH --output out.%j
+#SBATCH --error err.%j
+#SBATCH --mail-type=all
+#SBATCH --mail-user=shikhar.rai@rochester.edu
+
+module load python
+srun -n 1200 python main_Recipe3.py
+

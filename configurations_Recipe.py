@@ -1,7 +1,7 @@
 import  numpy as np
 
 infolder = './input'
-outfolder = './output0p25deg_Recipe'
+outfolder = './output_Recipe_2016'
 gridFile = 'ROMSgrid.nc'
 
 
@@ -10,7 +10,7 @@ xlen = 1120
 ylen = 434
 timelen = 248
 
-startTimeIndex = 0
+startTimeIndex = 100
 endTimeIndex = timelen
 
 # dimension info list
@@ -30,11 +30,11 @@ dimInfoList = [
 
 
 # number of variables
-nvar = 6
+nvar = 10
 ### add information about variables and 
 ### the file they are in in the list below
 #### DONT FORGET THE COMMAS #####
-inputFile = 'ROMS_withWRF_p25degC_data_crseAtm2P5degRecipe_LP.nc'
+inputFile = 'ROMS_withWRF_0p25degCrse_data_Recipe_inst_2p5deg.nc'
 varInfoList = [
     {'name': 'uo',
      'units': 'm/s',
@@ -70,7 +70,32 @@ varInfoList = [
       'units': 'm^2/s^2',
       'long_name': 'product of vo and tauy',
       'valtype': np.double,
+      'file': inputFile},
+
+     {'name': 'uaSq',
+     'units': 'm^2/s^2',
+     'long_name': 'square of ua',
+     'valtype': np.double,
+      'file': inputFile},
+
+     {'name': 'vaSq',
+      'units': 'm^2/s^2',
+      'long_name': 'square of va',
+      'valtype': np.double,
+      'file': inputFile},
+
+     {'name': 'uoSq',
+     'units': 'm^2/s^2',
+     'long_name': 'square of uo',
+     'valtype': np.double,
+      'file': inputFile},
+
+     {'name': 'voSq',
+      'units': 'm^2/s^2',
+      'long_name': 'square of vo',
+      'valtype': np.double,
       'file': inputFile}
+
 ]
 
 
